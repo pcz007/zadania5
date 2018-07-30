@@ -14,19 +14,24 @@ public class Zadanie54 {
         System.out.println("Podaj punkt na osi Y: ");
         y = scan.nextInt();
 
-        if (x > 0 && y > 0) {
+        if (x == 0 && y == 0) {
+            System.out.printf("Punkt (%d, %d) leży na środku układu współrzędnych", x, y);
+        } else if (x > 0 && y > 0) {
             System.out.printf("Punkt (%d, %d) leży w I ćwiartce układu współrzędnych", x, y);
-        }
-        if (x < 0 && y > 0) {
+        } else if (x == 0 && y > 0) {
+            System.out.printf("Punkt (%d, %d) leży w I ćwiartce układu współrzędnych", x, y);
+        } else if (x == 0 && y < 0) {
+            System.out.printf("Punkt (%d, %d) leży w IV ćwiartce układu współrzędnych", x, y);
+        } else if (x < 0 && y == 0) {
             System.out.printf("Punkt (%d, %d) leży w II ćwiartce układu współrzędnych", x, y);
+        } else if (x < 0 && y > 0) {
+            System.out.printf("Punkt (%d, %d) leży w II ćwiartce układu współrzędnych", x, y);
+        } else if (x > 0 && y == 0) {
+            System.out.printf("Punkt (%d, %d) leży w I ćwiartce układu współrzędnych", x, y);
+        } else if (x > 0 && y < 0) {
+            System.out.printf("Punkt (%d, %d) leży w IV ćwiartce układu współrzędnych", x, y);
         }
-        if (x < 0 && y < 0) {
-            System.out.printf("Punkt (%d, %d) leży w III ćwiartce układu współrzędnych", x, y);
-        }
-        if (x > 0 && y < 0) {
-            System.out.printf("Punkt (%d, %d) leży w VI ćwiartce układu współrzędnych", x, y);
-
-            scan.close();
-        }
+        scan.close();
     }
 }
+
